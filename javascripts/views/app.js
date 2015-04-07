@@ -70,6 +70,12 @@ app.AppView = Backbone.View.extend({
 	filterAll: function() {
 		app.Todos.each(this.filterOne, this);
 	},
+	filterLinkSelected: function() {
+		this.$('#filters li a')
+			.removeClass('selected')
+			.filter('[href="#/' + ( app.TodoFilter || '' ) + '"]')
+			.addClass('selected');
+	},
 	render: function() {
 		var completed = app.Todos.completed().length;
 		var remaining = app.Todos.remaining().length;
@@ -82,11 +88,7 @@ app.AppView = Backbone.View.extend({
 				completed: completed,
 				remaining: remaining
 			}));
-
-			this.$('#filter li a')
-				.removeClass('selected')
-				.filter('[href="/' + ( app.TodoFilter || '' ) + '"]')
-				.addClass('selected');
+			this.filterLinkSelected();
 		} else {
 			this.$main.hide();
 			this.$footer.hide();

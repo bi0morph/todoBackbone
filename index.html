@@ -64,6 +64,9 @@
           </span>
           <ul id="filters" class="list-unstyled">
             <li>
+              <a class="selected" href="#/">All</a>
+            </li>
+            <li>
               <a href="#/active">Active</a>
             </li>
             <li>
@@ -71,7 +74,7 @@
             </li>
           </ul>
           <% if (completed) { %>
-            <button id="clear-completed">Clear completed (<%= completed %>)</button>
+            <button id="clear-completed" class="btn btn-info">Clear completed (<%= completed %>)</button>
           <% } %>
         </script>
 
@@ -86,6 +89,7 @@
         <script type="text/javascript" src="/javascripts/views/app.js"></script>
         <script type="text/javascript" src="/javascripts/routers/router.js"></script>
         <script type="text/javascript" src="/javascripts/app.js"></script>
+
       </div>
     </div>
   </body>

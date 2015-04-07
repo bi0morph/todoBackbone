@@ -62,7 +62,10 @@ a {
 a:hover {
   color: #c5000c;
 }
-
+a.selected {
+  font-weight: bold;
+  text-decoration: underline;
+}
 header {
   padding-top: 35px;
   padding-bottom: 25px;
@@ -151,7 +154,37 @@ a.button span {
   height: 23px;
   padding-left: 50px;
 }
-
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
 #download-zip span {
   background: transparent url(../images/zip-icon.png) 12px 50% no-repeat;
 }
@@ -441,6 +474,8 @@ footer a:hover {
 .text-center {
   text-align: center;
 }
+
+
 /* #Media Queries
 ================================================== */
 

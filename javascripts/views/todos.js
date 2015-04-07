@@ -30,17 +30,21 @@ app.TodoView = Backbone.View.extend({
 		return this;
 	},
 
-	toggleVisible: function() {
-		var isCompleted = this.model.get('completed');
-		return (
-			(!isCompleted && app.TodoFilter === 'completed')
-			|| (isCompleted && app.TodoFilter === 'active')
-		);
-	},
+	toggleVisible : function () {
+      this.$el.toggleClass( 'hidden',  this.isHidden());
+    },
+    
+	isHidden : function () {
+      var isCompleted = this.model.get('completed');
+      return ( // hidden cases only
+        (!isCompleted && app.TodoFilter === 'completed')
+        || (isCompleted && app.TodoFilter === 'active')
+      );
+    },
 
 	togglecompleted: function() {
-		this.model.toggle();
-	},
+      this.model.toggle();
+    },
 
 	edit: function() {
 		this.$el.addClass('editing');
