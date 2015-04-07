@@ -25,19 +25,17 @@
         <hr>
 
         <section id="todoapp">
-          <header>
-            <h3>todos</h3>
-            <input id="new-todo" placeholder="What needs to be done?" autofocus>
-          </header>
+          <div>
+            <input id="new-todo" class="form-control" placeholder="What needs to be done?" autofocus>
+          </div>
           <div id="main">
-            <input id="toggle-all" type="checkbox">
-            <label for="toggle-all">Mark all as complete</label>
-            <ul id="todo-list"></ul>
+            <div class="main-control">
+              <input id="toggle-all" type="checkbox">
+              <label for="toggle-all">Mark all as complete</label>  
+            </div>
+            <ul id="todo-list" class="list-unstyled"></ul>
           </div>
-          <div id="footer"></div>
-          <div id="info">
-            <p>Double-click to edit a todo</p>
-          </div>
+          <div id="footer" class="text-center"></div>
         </section>
         
         <footer>
@@ -55,7 +53,7 @@
           <div class="view">
             <input class="toggle" type="checkbox" <%= completed ? 'checked' : ''%>>
             <label><%= title %></label>
-            <button class="destroy"></button>
+            <button class="destroy">x</button>
           </div>
           <input class="edit" value="<%= title %>"> 
         </script>
@@ -64,7 +62,7 @@
             <strong><%= remaining %></strong>
             <%= remaining === 1 ? 'item' : 'items' %> left
           </span>
-          <ul id="filters">
+          <ul id="filters" class="list-unstyled">
             <li>
               <a href="#/active">Active</a>
             </li>
@@ -72,8 +70,8 @@
               <a href="#/completed">Completed</a>
             </li>
           </ul>
-          <% if (complited) { %>
-            <button id="clear-complited">Clear complited (<%= complited %>)</button>
+          <% if (completed) { %>
+            <button id="clear-completed">Clear completed (<%= completed %>)</button>
           <% } %>
         </script>
 

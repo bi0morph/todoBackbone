@@ -299,6 +299,10 @@ ul li {
   list-style: disc;
   padding-left: 20px;
 }
+ul.list-unstyled li{
+  padding-left: 0;
+  list-style: none;
+}
 
 ol li {
   list-style-position: inside;
@@ -339,6 +343,104 @@ footer a:hover {
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
 
+#main {
+  width: 624px;
+}
+#main li {
+  border: 1px solid grey;
+  border-bottom: none;
+}
+#main ul:last-child{
+ border-bottom: 1px solid grey; 
+}
+#filters {
+  display: inline-block;
+  margin-left: 20px;
+}
+#filters li {
+  margin: auto 15px;
+  display: inline-block;
+}
+.form-control {
+  display: block;
+  width: 596px;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.main-control {
+  padding: 5px 15px;
+  width: 592px;
+  background-color: #e3e3e3;
+}
+.view {
+  padding: 15px;
+  background-color: #f2dede;
+  width: 592px;
+}
+.completed .view {
+  background-color: #dff0d8;
+  /*#d9edf7*/
+}
+.completed label {
+  text-decoration: line-through;
+}
+.edit {
+  display: none;
+}
+.editing .edit {
+  display: block;
+  width: 588px;
+  font-size: 18px;
+  padding: 15px;
+}
+.editing .view {
+  display: none;
+}
+.destroy {
+  float: right;
+  cursor: pointer;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: red;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=40);
+  opacity: .4;
+  background: none;
+  border: none;
+}
+.destroy:hover {
+  filter: alpha(opacity=90);
+  opacity: .9;
+  text-shadow: 1px 2px 1px #fff;
+}
+.hidden {
+  display: none;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
 /* #Media Queries
 ================================================== */
 

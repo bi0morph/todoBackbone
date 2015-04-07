@@ -5,16 +5,16 @@ var TodoList = Backbone.Collection.extend({
 
 	localStorage: new Backbone.LocalStorage('todos-backbone'),
 
-	complited: function () {
+	completed: function () {
 		return this.filter(function(todo) {
-			return todo.get('complited');
+			return todo.get('completed');
 		})
 	},
 
 	remaining: function () {
-		// apply send array this.complited() as paramerters
+		// apply send array this.completed() as paramerters
 		// like _.without(this, this[0], this[1]... etc);
-		return this.without.apply( this, this.complited() );
+		return this.without.apply( this, this.completed() );
 	},
 
 	nextOrder: function() {
